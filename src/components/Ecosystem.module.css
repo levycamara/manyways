@@ -1,0 +1,316 @@
+.section {
+  width: 100%;
+  margin: -1px 0 0; /* Overlap borders */
+}
+
+.ecosystemBox {
+  display: flex;
+  flex-direction: column;
+  gap: -1px; /* Overlap row borders */
+  width: 100%;
+}
+
+/* Side Panels */
+.sidePanelLeft {
+  height: 300px;
+  border: 1px solid var(--gray-border);
+  border-radius: 10px;
+  margin-right: -1px;
+}
+
+.sidePanelRight {
+  height: 300px;
+  border: 1px solid var(--gray-border);
+  border-radius: 10px;
+}
+
+/* Row 1: FAUVES */
+.rowFauves {
+  display: grid;
+  grid-template-columns: 250px 300px 1fr 250px;
+  width: 100%;
+  margin-bottom: -1px;
+}
+
+.rowFauves .logoBox {
+  margin-right: -1px;
+}
+
+.rowFauves .contentBox {
+  margin-right: -1px;
+}
+
+.bgFauves {
+  background-color: #FF3F00;
+}
+
+/* Row 2: TOKYON */
+.rowTokyon {
+  display: grid;
+  grid-template-columns: 250px 1fr 300px 232px 250px;
+  width: 100%;
+  margin-bottom: -1px;
+}
+
+.rowTokyon .contentBox {
+  margin-right: -1px;
+}
+
+.rowTokyon .logoBox {
+  margin-right: -1px;
+}
+
+.rowTokyon .emptyBoxTokyon {
+  margin-right: -1px;
+}
+
+.bgTokyon {
+  background-color: #222222;
+}
+
+.emptyBoxTokyon {
+  height: 300px;
+  border: 1px solid var(--gray-border);
+  border-radius: 10px;
+}
+
+/* Row 3: ALLYO */
+.rowAllyo {
+  display: grid;
+  grid-template-columns: 250px 185px 300px 1fr 250px;
+  width: 100%;
+  margin-bottom: -1px;
+}
+
+.rowAllyo .emptyBoxAllyo {
+  margin-right: -1px;
+}
+
+.rowAllyo .logoBox {
+  margin-right: -1px;
+}
+
+.rowAllyo .contentBox {
+  margin-right: -1px;
+}
+
+.emptyBoxAllyo {
+  height: 300px;
+  border: 1px solid var(--gray-border);
+  border-radius: 10px;
+}
+
+.bgAllyo {
+  background-color: var(--background);
+}
+
+/* Row 4: ASTERYSKO */
+.rowAsterysko {
+  display: grid;
+  grid-template-columns: 250px 1fr 300px 250px;
+  width: 100%;
+  margin-bottom: -1px;
+}
+
+.rowAsterysko .contentBox {
+  margin-right: -1px;
+}
+
+.rowAsterysko .logoBox {
+  margin-right: -1px;
+}
+
+.bgAsterysko {
+  background-color: #0412DD;
+}
+
+/* Row 5: NIVA */
+.rowNiva {
+  display: grid;
+  grid-template-columns: 250px 185px 300px 1fr 250px;
+  width: 100%;
+  margin-bottom: -1px;
+}
+
+.rowNiva .emptyBoxNiva {
+  margin-right: -1px;
+}
+
+.rowNiva .logoBox {
+  margin-right: -1px;
+}
+
+.rowNiva .contentBox {
+  margin-right: -1px;
+}
+
+.emptyBoxNiva {
+  height: 300px;
+  border: 1px solid var(--gray-border);
+  border-radius: 10px;
+}
+
+.bgNiva {
+  background-color: #1D0C17;
+}
+
+/* Shared card styles */
+.logoBox {
+  height: 300px;
+  border: 1px solid var(--gray-border);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
+.logoImage {
+  display: block;
+  max-width: 80%;
+  height: auto;
+}
+
+.contentBox {
+  height: 300px;
+  border: 1px solid var(--gray-border);
+  border-radius: 10px;
+  background-color: var(--background);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: relative;
+  z-index: 1;
+}
+
+/* Specific paddings and layouts matching Figma exactly */
+.rowFauves .contentBox {
+  padding: 44px 160px 50px 51px;
+}
+
+.rowTokyon .contentBox {
+  padding: 44px 139px 50px 51px;
+}
+
+.rowAllyo .contentBox {
+  padding: 43px 47px 49px 50px;
+}
+
+.rowAsterysko .contentBox {
+  padding: 44px 261px 50px 51px;
+}
+
+.rowNiva .contentBox {
+  padding: 43px 60px 49px 50px;
+}
+
+.text {
+  font-family: var(--font-plus-jakarta-sans), sans-serif;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 1.35;
+  color: var(--foreground);
+}
+
+.ctaButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 36px;
+  padding: 10px 20px;
+  border: 1px solid var(--gray-border);
+  border-radius: 100px;
+  font-family: var(--font-plus-jakarta-sans), sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--foreground);
+  background-color: var(--background);
+  transition: all 0.2s ease;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.ctaButton:hover {
+  background-color: var(--foreground);
+  color: var(--background);
+  border-color: var(--foreground);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1174px) {
+  .rowFauves {
+    grid-template-columns: 80px 300px 1fr;
+  }
+  .rowTokyon {
+    grid-template-columns: 80px 1fr 300px 232px;
+  }
+  .rowAllyo {
+    grid-template-columns: 80px 185px 300px 1fr;
+  }
+  .rowAsterysko {
+    grid-template-columns: 80px 1fr 300px;
+  }
+  .rowNiva {
+    grid-template-columns: 80px 185px 300px 1fr;
+  }
+  
+  .sidePanelRight {
+    display: none;
+  }
+  
+  .logoBox, .contentBox, .emptyBoxTokyon, .emptyBoxAllyo, .emptyBoxNiva {
+    border-right: none;
+  }
+}
+
+@media (max-width: 1100px) {
+  /* Stack grid columns for sub-rows */
+  .rowFauves, .rowTokyon, .rowAllyo, .rowAsterysko, .rowNiva {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  
+  .logoBox, .contentBox {
+    height: auto;
+    min-height: 250px;
+    margin: 0 !important;
+    border-radius: 10px;
+    border: 1px solid var(--gray-border);
+    width: 100% !important;
+  }
+  
+  .logoBox {
+    padding: 60px 40px;
+  }
+  
+  .contentBox {
+    padding: 30px !important;
+    gap: 30px;
+  }
+  
+  .emptyBoxTokyon, .emptyBoxAllyo, .emptyBoxNiva, .sidePanelLeft, .sidePanelRight {
+    display: none;
+  }
+  
+  .text {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 900px) {
+  .logoBox, .contentBox {
+    border-left: none;
+    border-right: none;
+    border-radius: 0;
+  }
+  
+  .rowFauves, .rowTokyon, .rowAllyo, .rowAsterysko, .rowNiva {
+    margin-bottom: 30px;
+    gap: 0;
+  }
+}
